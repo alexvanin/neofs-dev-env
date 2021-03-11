@@ -2,22 +2,124 @@
 
 version: "2.4"
 services:
-  neofs_morph_chain:
+  neofs_morph_chain_1:
     image: nspccdev/neo-go:${NEOGO_VERSION}
-    container_name: morph_chain
+    container_name: morph_chain1
     domainname: ${LOCAL_DOMAIN}
     hostname: morph_chain
     networks:
       chain_int:
       internet:
-        ipv4_address: ${IPV4_PREFIX}.90
+        ipv4_address: ${IPV4_PREFIX}.91
     stop_signal: SIGKILL
     environment:
     - ACC=/morph_chain.gz
     volumes:
     - ./../../vendor/morph_chain.gz:/morph_chain.gz
     - ./protocol.privnet.yml:/config/protocol.privnet.yml
-    - ./node-wallet.json:/wallets/node-wallet.json
+    - ./alphabet_wallet_1.json:/wallets/node-wallet.json
+    - ./../../vendor/hosts:/etc/hosts
+  neofs_morph_chain_2:
+    image: nspccdev/neo-go:${NEOGO_VERSION}
+    container_name: morph_chain2
+    domainname: ${LOCAL_DOMAIN}
+    hostname: morph_chain
+    networks:
+      chain_int:
+      internet:
+        ipv4_address: ${IPV4_PREFIX}.92
+    stop_signal: SIGKILL
+    environment:
+    - ACC=/morph_chain.gz
+    volumes:
+    - ./../../vendor/morph_chain.gz:/morph_chain.gz
+    - ./protocol.privnet.yml:/config/protocol.privnet.yml
+    - ./alphabet_wallet_2.json:/wallets/node-wallet.json
+    - ./../../vendor/hosts:/etc/hosts
+  neofs_morph_chain_3:
+    image: nspccdev/neo-go:${NEOGO_VERSION}
+    container_name: morph_chain3
+    domainname: ${LOCAL_DOMAIN}
+    hostname: morph_chain
+    networks:
+      chain_int:
+      internet:
+        ipv4_address: ${IPV4_PREFIX}.93
+    stop_signal: SIGKILL
+    environment:
+    - ACC=/morph_chain.gz
+    volumes:
+    - ./../../vendor/morph_chain.gz:/morph_chain.gz
+    - ./protocol.privnet.yml:/config/protocol.privnet.yml
+    - ./alphabet_wallet_3.json:/wallets/node-wallet.json
+    - ./../../vendor/hosts:/etc/hosts
+  neofs_morph_chain_4:
+    image: nspccdev/neo-go:${NEOGO_VERSION}
+    container_name: morph_chain4
+    domainname: ${LOCAL_DOMAIN}
+    hostname: morph_chain
+    networks:
+      chain_int:
+      internet:
+        ipv4_address: ${IPV4_PREFIX}.94
+    stop_signal: SIGKILL
+    environment:
+    - ACC=/morph_chain.gz
+    volumes:
+    - ./../../vendor/morph_chain.gz:/morph_chain.gz
+    - ./protocol.privnet.yml:/config/protocol.privnet.yml
+    - ./alphabet_wallet_4.json:/wallets/node-wallet.json
+    - ./../../vendor/hosts:/etc/hosts
+  neofs_morph_chain_5:
+    image: nspccdev/neo-go:${NEOGO_VERSION}
+    container_name: morph_chain5
+    domainname: ${LOCAL_DOMAIN}
+    hostname: morph_chain
+    networks:
+      chain_int:
+      internet:
+        ipv4_address: ${IPV4_PREFIX}.95
+    stop_signal: SIGKILL
+    environment:
+    - ACC=/morph_chain.gz
+    volumes:
+    - ./../../vendor/morph_chain.gz:/morph_chain.gz
+    - ./protocol.privnet.yml:/config/protocol.privnet.yml
+    - ./alphabet_wallet_5.json:/wallets/node-wallet.json
+    - ./../../vendor/hosts:/etc/hosts
+  neofs_morph_chain_6:
+    image: nspccdev/neo-go:${NEOGO_VERSION}
+    container_name: morph_chain6
+    domainname: ${LOCAL_DOMAIN}
+    hostname: morph_chain
+    networks:
+      chain_int:
+      internet:
+        ipv4_address: ${IPV4_PREFIX}.96
+    stop_signal: SIGKILL
+    environment:
+    - ACC=/morph_chain.gz
+    volumes:
+    - ./../../vendor/morph_chain.gz:/morph_chain.gz
+    - ./protocol.privnet.yml:/config/protocol.privnet.yml
+    - ./alphabet_wallet_6.json:/wallets/node-wallet.json
+    - ./../../vendor/hosts:/etc/hosts
+  neofs_morph_chain_7:
+    image: nspccdev/neo-go:${NEOGO_VERSION}
+    container_name: morph_chain7
+    domainname: ${LOCAL_DOMAIN}
+    hostname: morph_chain
+    networks:
+      chain_int:
+      internet:
+        ipv4_address: ${IPV4_PREFIX}.97
+    stop_signal: SIGKILL
+    environment:
+    - ACC=/morph_chain.gz
+    volumes:
+    - ./../../vendor/morph_chain.gz:/morph_chain.gz
+    - ./protocol.privnet.yml:/config/protocol.privnet.yml
+    - ./alphabet_wallet_7.json:/wallets/node-wallet.json
     - ./../../vendor/hosts:/etc/hosts
 
 networks:

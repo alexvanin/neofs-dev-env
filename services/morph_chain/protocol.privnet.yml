@@ -1,12 +1,24 @@
 ProtocolConfiguration:
   Magic: 56753
-  SecondsPerBlock: 1
+  SecondsPerBlock: 5
   MemPoolSize: 50000
   StandbyCommittee:
-    - 02b3622bf4017bdfe317c58aed5f4c753f206b7db896046fa7d774bbc4bf7f8dc2
-  ValidatorsCount: 1
+    - 03012d47e76210aec73be39ab3d186e0a40fe8d86bfa3d4fabfda57ba13b88f96a
+    - 02f7528ce97c9a93558efe7d4f62577aabdf771c931f54a71be6ad21e7d9cc1777
+    - 023e00f03a16e8707ce045eb42ee80d392451541ee510dc18e1c8befbac54d7426
+    - 0340750b92789821683283bcb98e32b7e032b94f267b6964613fc31a7ce5813fdd
+    - 03e825b1fcabaa0990159bbdc3041011477b1a9c772ed68053ecc95fa26709f149
+    - 02ad2ea2d1fa9599c76a3e7d6f29232020ab365f95d456cd95c54774f019bb6cf7
+    - 03c6bedb3dd9671a358df4b17f434a3dc7914b2f4b144bc1de0b95069a533938d7
+  ValidatorsCount: 7
   SeedList:
-    - 172.200.0.1:20333
+    - 192.168.130.91:20333
+    - 192.168.130.92:20333
+    - 192.168.130.93:20333
+    - 192.168.130.94:20333
+    - 192.168.130.95:20333
+    - 192.168.130.96:20333
+    - 192.168.130.97:20333
   VerifyBlocks: true
   VerifyTransactions: true
   StateRootInHeader: false
@@ -23,9 +35,9 @@ ApplicationConfiguration:
   ProtoTickInterval: 2
   PingInterval: 30
   PingTimeout: 90
-  MaxPeers: 10
-  AttemptConnPeers: 5
-  MinPeers: 0
+  MaxPeers: 100
+  AttemptConnPeers: 20
+  MinPeers: 5
   RPC:
     Enabled: true
     EnableCORSWorkaround: false
@@ -35,7 +47,7 @@ ApplicationConfiguration:
     Enabled: true
     UnlockWallet:
       Path: "./wallets/node-wallet.json"
-      Password: "one"
+      Password: ""
   Prometheus:
     Enabled: true
     Port: 20001
@@ -44,4 +56,4 @@ ApplicationConfiguration:
     Port: 20011
   UnlockWallet:
     Path: "./wallets/node-wallet.json"
-    Password: "one"
+    Password: ""
